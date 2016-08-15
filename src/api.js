@@ -11,6 +11,14 @@ let BufferError = require('./error.js');
 class Api {
 
 	/**
+	 * A promise which resolves to Buffer entity on success.
+	 * On Buffer API error rejects with {@link BufferError}.
+	 * Otherwise rejects with {@link Error}.
+	 * @memberof Api
+	 * @typedef {Promise} Response
+	 */
+
+	/**
 	 * Constructs Api instance with authorization token.
 	 * @param {string} token Authorization token
 	 */
@@ -33,7 +41,7 @@ class Api {
 	 * Makes HTTP GET request.
 	 * @param {string} route Route for Buffer API. E.g '/user.json'
 	 * @param {Object} query HTTP query parameters
-	 * @return {Promise}
+	 * @return {Api.Response}
 	 */
 	get(route, query) {
 		let options = {
@@ -53,7 +61,7 @@ class Api {
 	 * Makes HTTP POST request.
 	 * @param {string} route Route for Buffer API. E.g '/oauth2/token.json'
 	 * @param {Object} formData
-	 * @return {Promise}
+	 * @return {Api.Response}
 	 */
 	post(route, formData) {
 		let options = {
