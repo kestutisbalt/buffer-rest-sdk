@@ -1,10 +1,10 @@
 {
-	"name": "buffer-api",
+	"name": "buffer-rest-sdk",
 	"description": "Node.js Buffer API library",
 	"version": "0.1.0",
 	"main": "src/index.js",
 	"author": "kestutisbalt",
-	"repository": "kestutisbalt/buffer-api",
+	"repository": "kestutisbalt/buffer-rest-sdk",
 	"license": "MIT",
 	"scripts": {
 		"test": "./node_modules/.bin/mocha ./test/**/*.js"
