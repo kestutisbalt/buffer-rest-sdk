@@ -20,7 +20,7 @@ describe('Client', () => {
 			expect(exception).to.be.an.instanceof(Error);
 		});
 
-		it('should initialize with token', () => {
+		it('should initialize user client with api', () => {
 			//Given
 			let token = 'token';
 
@@ -28,7 +28,7 @@ describe('Client', () => {
 			let client = new Client(token);
 
 			//Then
-			expect(client.token).to.equal(token);
+			expect(client.user.api.token).to.equal(token);
 		});
 	});
 });

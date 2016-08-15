@@ -1,9 +1,14 @@
+let Api = require('./api.js');
+let UserClient = require('./user_client.js');
+
 class Client {
 	constructor(token) {
 		if (!token) {
 			throw new Error('token is undefined');
 		}
-		this.token = token;
+		let api = new Api(token);
+
+		this.user = new UserClient(api);
 	}
 }
 
