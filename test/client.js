@@ -1,5 +1,6 @@
 let chai = require('chai');
 let expect = chai.expect;
+let sinon = require('sinon');
 
 let Client = require('../src/client.js');
 
@@ -29,6 +30,17 @@ describe('Client', () => {
 
 			//Then
 			expect(client.user.api.token).to.equal(token);
+		});
+
+		it('should initialize profiles client with api', () => {
+			//Given
+			let token = 'token';
+
+			//When
+			let client = new Client(token);
+
+			//Then
+			expect(client.profiles.api.token).to.equal(token);
 		});
 	});
 });
