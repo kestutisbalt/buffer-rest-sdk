@@ -7,6 +7,10 @@ let BufferError = require('../src/error.js');
 
 describe('Api', () => {
 
+	after(() => {
+		nock.restore();
+	});
+
 	describe('Constructor', () => {
 		it('should throw if token is undefined', () => {
 			//Given
