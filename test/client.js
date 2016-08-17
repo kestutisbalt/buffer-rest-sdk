@@ -64,5 +64,16 @@ describe('Client', () => {
 			//Then
 			expect(client.info.api.token).to.equal(token);
 		});
+
+		it('should initialize links client with api', () => {
+			//Given
+			let token = 'token';
+
+			//When
+			let client = new Client(token);
+
+			//Then
+			expect(client.links.api.token).to.equal(token);
+		});
 	});
 });

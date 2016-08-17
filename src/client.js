@@ -3,6 +3,7 @@ let UserClient = require('./user_client.js');
 let ProfilesClient = require('./profiles_client.js');
 let UpdatesClient = require('./updates_client.js');
 let InfoClient = require('./info_client.js');
+let LinksClient = require('./links_client.js');
 
 
 class Client {
@@ -16,6 +17,7 @@ class Client {
 		this.profiles = new ProfilesClient(api);
 		this.updates = new UpdatesClient(api);
 		this.info = new InfoClient(api);
+		this.links = new LinksClient(api);
 	}
 }
 
