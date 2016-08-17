@@ -93,10 +93,7 @@ function responseHandler(resolve, reject) {
 
 
 function isResponseCodeSuccess(code) {
-	if (code >= 200 && code < 400) {
-		return true;
-	}
-	return false;
+	return code >= 200 && code < 400;
 }
 
 
