@@ -86,7 +86,8 @@ function responseHandler(resolve, reject) {
 		} else if (isResponseCodeSuccess(res.statusCode)) {
 			resolve(body);
 		} else {
-			reject(new BufferError(body.code, body.error));
+			reject(new BufferError(res.statusCode,
+				body.code, body.error));
 		}
 	};
 }

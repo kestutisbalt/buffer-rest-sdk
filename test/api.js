@@ -124,7 +124,7 @@ describe('Api', () => {
 			api.get(route).catch((value) => {
 				expect(value).to.be.an.instanceof(BufferError);
 				expect(value).to.deep.equal(
-					new BufferError(error.code, error.error));
+					new BufferError(401, error.code, error.error));
 				done();
 			});
 		});
@@ -233,7 +233,7 @@ describe('Api', () => {
 			api.post(route).catch((value) => {
 				expect(value).to.be.an.instanceof(BufferError);
 				expect(value).to.deep.equal(
-					new BufferError(error.code, error.error));
+					new BufferError(401, error.code, error.error));
 				done();
 			});
 		});
