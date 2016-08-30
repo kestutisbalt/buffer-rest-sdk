@@ -15,7 +15,7 @@ documentation](https://buffer.com/developers/api).
 ## Installation
 
 ```sh
-$ npm install buffer-rest-sdk
+$ npm install kestutisbalt/buffer-rest-sdk
 ```
 
 ## Get Started
@@ -47,7 +47,7 @@ To write an app using SDK:
 
 ## License
 
-Code released under [LICENSE](LICENSE)  
+Code released under [LICENSE](LICENSE)
 
 
 ## Contributions
