@@ -5,6 +5,8 @@ Node.js SDK designed to work with
 for Buffer's REST API. For full specification regarding entities used in this
 library refer to [Buffer's official
 documentation](https://buffer.com/developers/api).
+**Note: This is a personal project and it is not provided by
+[Buffer](https://buffer.com)**.
 
 
 ## Requirements
