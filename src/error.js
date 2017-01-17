@@ -7,14 +7,14 @@ class BufferError extends Error {
 	 * Constructs Buffer API error.
 	 * @param {number} httpStatusCode HTTP status code
 	 * @param {number} code Error code
-	 * @param {string} message Error description
+	 * @param {string} error Error description
 	 */
-	constructor(httpStatusCode, code, message) {
-		super(message);
-
+	constructor(httpStatusCode, code, error) {
+		super();
+		this.name = 'BufferError';
 		this.httpStatusCode = httpStatusCode;
 		this.code = code;
-		this.message = message;
+		this.error = error;
 	}
 
 	/**
