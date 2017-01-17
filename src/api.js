@@ -23,10 +23,7 @@ class Api {
 	 * @param {string} token Authorization token
 	 */
 	constructor(token) {
-		if (!token) {
-			throw new Error('token is undefined');
-		}
-		this.token = token;
+		this.token = token? token : '';
 	}
 
 	/**

@@ -11,23 +11,6 @@ describe('Api', () => {
 		nock.restore();
 	});
 
-	describe('Constructor', () => {
-		it('should throw if token is undefined', () => {
-			//Given
-			let exception = null;
-
-			//When
-			try {
-				new Api;
-			} catch(e) {
-				exception = e;
-			}
-
-			//Then
-			expect(exception).to.be.an.instanceof(Error);
-		});
-	});
-
 	describe('get', () => {
 		it('should set authorization header', (done) => {
 			//Given
