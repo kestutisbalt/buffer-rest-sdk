@@ -47,6 +47,43 @@ To write an app using SDK:
     ```
 
 
+## Request access token for a user
+
+  * To request access token user must be redirected to Buffer authorization url.
+    To get authorization url:
+
+    ```js
+    const BufferAuth = require('buffer-rest-sdk').Auth;
+
+	// Client id provided by Buffer.
+	const clientId = '';
+	// Client secret provided by Buffer.
+	const clientSecret = '';
+	// Redirect url specified when registered app in Buffer.
+	const redirectUri = '';
+
+	const bufferAuth = new BufferAuth(clientId, clientSecret, redirectUri);
+
+	// Returns authorization url redirect user to.
+	const authUrl = bufferAuth.authUrl();
+    ```
+
+  * When user gives permission for your application to access Buffer account.
+    Buffer will redirect user to a link provided in `redirectUri` variable.
+    Pass `code` parameter set as query argument to a method below:
+
+    ```js
+    // Code returned as query parameter from Buffer.
+    const code = '';
+
+    bufferAuth.requestAccessToken(code).then((result) => {
+      console.log(result.access_token);
+    }).catch((error) => {
+      console.log(error);
+    });
+    ```
+
+
 ## License
 
 Code released under [LICENSE](LICENSE)
