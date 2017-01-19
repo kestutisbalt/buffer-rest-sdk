@@ -70,6 +70,24 @@ class BufferError extends Error {
 		return (this.code === 1000
 			&& this.httpStatusCode === 500);
 	}
+
+	/**
+	 * Checks if reached update limit for profile error.
+	 * @return {boolean}
+	 */
+	isReachedUpdateLimitForProfile() {
+		return (this.code === 1023
+			&& this.httpStatusCode === 403);
+	}
+
+	/**
+	 * Checks if duplicate content error.
+	 * @return {boolean}
+	 */
+	isDuplicateContent() {
+		return (this.code === 1025
+			&& this.httpStatusCode === 400);
+	}
 }
 
 module.exports = BufferError;
