@@ -96,7 +96,7 @@ class UpdatesClient {
 		if (profileIds) {
 			updateObj.profile_ids = profileIds;
 		}
-		return this.api.post('/updates/create', updateObj);
+		return this.api.post('/updates/create.json', updateObj);
 	}
 
 	/**
