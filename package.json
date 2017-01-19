@@ -1,7 +1,7 @@
 {
 	"name": "buffer-rest-sdk",
 	"description": "Node.js Buffer API library",
-	"version": "0.4.0",
+	"version": "0.4.1",
 	"main": "src/index.js",
 	"author": "kestutisbalt",
 	"repository": "kestutisbalt/buffer-rest-sdk",
